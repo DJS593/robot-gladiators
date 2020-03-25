@@ -11,14 +11,17 @@ var enemyNames = ["Roborto", "Amy Android", "Robo Trumble"];
 var enemyHealth = 50;
 var enemyAttack = 12;
 
-/*
-console.log(enemyNames);
-console.log(enemyNames[0]);
-console.log(enemyNames[1]);
-console.log(enemyNames[2]);
-console.log(enemyNames.length);*/
 
-var fight = function(enemyNames) {
+//for(var i = 0; i < enemyNames.length; i++) {
+
+// console.log(enemyNames[i]);
+// console.log(i);
+// console.log(enemyNames[i] + "is at" + i + "index");
+
+
+//}
+
+var fight = function(enemyName) {
     //window.alert(("Welcome to Robot Gladiators");
     //while (enemyHealth > 0) {
     }
@@ -32,18 +35,18 @@ for(var i = 0; i < enemyNames.length; i++) {
 
         enemyHealth = enemyHealth - playerAttack;
 
-        console.log(playerName + " attacked " + enemyNames + ". " + enemyNames + " now has " + enemyHealth + " health remaining.");
+        console.log(playerName + " attacked " + enemyNames[i] + ". " + enemyNames[i] + " now has " + enemyHealth + " health remaining.");
 
         if (enemyHealth <= 0) {
-        window.alert(enemyNames + " has died!");
+        window.alert(enemyNames[i] + " has died!");
         } else {
-        window.alert(enemyNames + " still has " + enemyHealth + " health left.");
+        window.alert(enemyNames[i] + " still has " + enemyHealth + " health left.");
         }
 
         playerHealth = playerHealth - enemyAttack;
 
         console.log(
-            enemyNames + " attacked " + playerName + ". " + playerName + " now has " + playerHealth + " health remaining."
+            enemyNames[i] + " attacked " + playerName + ". " + playerName + " now has " + playerHealth + " health remaining."
         );
 
         if (playerHealth <= 0) {
